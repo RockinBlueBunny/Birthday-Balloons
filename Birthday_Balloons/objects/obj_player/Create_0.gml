@@ -1,3 +1,5 @@
+// ######################## COLLECTING STUFF ########################
+got_balloon = false;
 // MOVEMENT VARIABLES
 move_speed = 2.5;      // left/right speed
 jump_speed = -15;     // upward jump speed

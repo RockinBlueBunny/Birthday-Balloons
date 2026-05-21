@@ -4,6 +4,7 @@
   "name": "Birthday_Balloons",
   "resources": [
     {"id":{"name":"tile_island","path":"tilesets/tile_island/tile_island.yy",},"order":0,},
+    {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},"order":3,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_ground","path":"objects/obj_ground/obj_ground.yy",},"order":1,},
     {"id":{"name":"spr_balloon","path":"sprites/spr_balloon/spr_balloon.yy",},"order":2,},

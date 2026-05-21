@@ -32,12 +32,61 @@ else {
 move_and_collide(move_x, move_y, ground_object); // the one line that actually moves the object
 
 
+// ##################### AVOID STICKING TO THE BOTTOM OF PLATFORMS #####################
+if (is_ceiling) { // If hitting ceiling (platform above), move back down
+	if (move_y < 0) {
+		move_y = 0;	
+	}
+}
 
+if (place_meeting(x, y, obj_balloon)) {
+    got_balloon = true;
 
+    var myinstance = instance_place(x, y, obj_balloon);
+    if (myinstance != noone) {
+        instance_destroy(myinstance);
+    }
 
+    // Make gravity stronger
+    gravity_force -= 0.1;
 
+    // Optional: allow faster falling
+    max_fall_speed -= 1;
+}
+/// STEP EVENT
 
-   
+// ---------------- APPLY GRAVITY ----------------
+if (!is_climbing) {
+    move_y += gravity_force;
+    if (move_y > max_fall_speed) {
+        move_y = max_fall_speed;
+    }
+}
 
+// ---------------- HORIZONTAL MOVEMENT ----------------
+if (move_x != 0) {
+    var sign_h = sign(move_x);
+    repeat (abs(move_x)) {
+        if (!place_meeting(x + sign_h, y, ground_object)) {
+            x += sign_h;
+        } else {
+            move_x = 0; // stop at wall
+            break;
+        }
+    }
+}
 
-
+// ---------------- VERTICAL MOVEMENT ----------------
+is_grounded = false;
+if (move_y != 0) {
+    var sign_v = sign(move_y);
+    repeat (abs(move_y)) {
+        if (!place_meeting(x, y + sign_v, ground_object)) {
+            y += sign_v;
+        } else {
+            if (sign_v > 0) is_grounded = true; // landed
+            move_y = 0; // stop vertical movement
+            break;
+        }
+    }
+}
