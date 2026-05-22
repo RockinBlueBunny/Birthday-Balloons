@@ -48,10 +48,14 @@ if (place_meeting(x, y, obj_balloon)) {
     }
 
     // Make gravity stronger
-    gravity_force -= 0.1;
+    gravity_force -= 0.05;
 
-    // Optional: allow faster falling
-    max_fall_speed -= 1;
+    //slow falling
+    max_fall_speed -= 1.5;
+	
+	
+	
+	
 }
 /// STEP EVENT
 

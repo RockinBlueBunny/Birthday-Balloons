@@ -4,6 +4,7 @@
   "name": "Birthday_Balloons",
   "resources": [
     {"id":{"name":"tile_island","path":"tilesets/tile_island/tile_island.yy",},"order":0,},
+    {"id":{"name":"obj_ggrjgegie","path":"objects/obj_ggrjgegie/obj_ggrjgegie.yy",},"order":4,},
     {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},"order":3,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_ground","path":"objects/obj_ground/obj_ground.yy",},"order":1,},
@@ -12,6 +13,7 @@
     {"id":{"name":"spr_tile","path":"sprites/spr_tile/spr_tile.yy",},"order":1,},
     {"id":{"name":"obj_balloon","path":"objects/obj_balloon/obj_balloon.yy",},"order":2,},
     {"id":{"name":"spr_ground","path":"sprites/spr_ground/spr_ground.yy",},"order":4,},
+    {"id":{"name":"Sprite6","path":"sprites/Sprite6/Sprite6.yy",},"order":5,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
