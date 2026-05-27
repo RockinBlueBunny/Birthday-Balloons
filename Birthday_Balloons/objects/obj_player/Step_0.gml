@@ -47,14 +47,14 @@ if (place_meeting(x, y, obj_balloon)) {
         instance_destroy(myinstance);
     }
 
-    // Make gravity stronger
+    //make gravity stronger
     gravity_force -= 0.05;
 
     //slow falling
-    max_fall_speed -= 1.5;
+    max_fall_speed -= 0.5;
 	
-	
-	
+	//jump speed
+	jump_speed -= 1
 	
 }
 /// STEP EVENT
@@ -93,4 +93,23 @@ if (move_y != 0) {
             break;
         }
     }
+}
+
+if (place_meeting(x, y, obj_nail)) {
+   got_obj_nail = true;
+
+    var myinstance = instance_place(x, y, obj_nail);
+    if (myinstance != noone) {
+        instance_destroy(myinstance);
+    }
+
+    //make gravity stronger
+    gravity_force += 0.05;
+
+    //slow falling
+    max_fall_speed += 0.5;
+	
+	//jump speed
+	jump_speed += 1
+	
 }
