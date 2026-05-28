@@ -94,7 +94,7 @@ if (move_y != 0) {
         }
     }
 }
-
+// make player jumpower worse
 if (place_meeting(x, y, obj_nail)) {
    got_obj_nail = true;
 
@@ -111,5 +111,59 @@ if (place_meeting(x, y, obj_nail)) {
 	
 	//jump speed
 	jump_speed += 1
+	
+}
+if (place_meeting(x, y, obj_laserright)) {
+   got_obj_laserright = true;
+
+    var myinstance = instance_place(x, y, obj_laserright);
+    if (myinstance != noone) {
+        instance_destroy(myinstance);
+    }
+
+    //make gravity stronger
+    gravity_force += 0.05;
+
+    //slow falling
+    max_fall_speed += 0.5;
+	
+	//jump speed
+	jump_speed += 1
+	
+}
+if (place_meeting(x, y, obj_laser)) {
+   got_obj_laser = true;
+
+    var myinstance = instance_place(x, y, obj_laser);
+    if (myinstance != noone) {
+        instance_destroy(myinstance);
+    }
+
+    //make gravity stronger
+    gravity_force += 0.05;
+
+    //slow falling
+    max_fall_speed += 0.5;
+	
+	//jump speed
+	jump_speed += 1
+	
+}
+if (place_meeting(x, y, obj_rainbowballoon)) {
+   got_obj_rainbowballoon = true;
+
+    var myinstance = instance_place(x, y, obj_rainbowballoon);
+    if (myinstance != noone) {
+        instance_destroy(myinstance);
+    }
+
+    //make gravity stronger
+    gravity_force -= 15;
+
+    //slow falling
+    max_fall_speed -= 1.5;
+	
+	//jump speed
+	jump_speed -= 0.5
 	
 }
