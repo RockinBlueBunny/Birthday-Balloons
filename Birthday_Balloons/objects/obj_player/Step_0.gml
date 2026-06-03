@@ -4,7 +4,6 @@ move_x = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_chec
 move_x *= move_speed;
 var jump_pressed = keyboard_check_pressed(vk_space); // var makes this a local variable
 
-// COLLISION CHECKS
 
 
 // Check if standing on the ground
@@ -158,12 +157,12 @@ if (place_meeting(x, y, obj_rainbowballoon)) {
     }
 
     //make gravity stronger
-    gravity_force -= 15;
+    gravity_force += 0.05;
 
     //slow falling
-    max_fall_speed -= 1.5;
+    max_fall_speed += 0.5;
 	
 	//jump speed
-	jump_speed -= 0.5
+	jump_speed += 1
 	
 }

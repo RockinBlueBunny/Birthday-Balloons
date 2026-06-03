@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_win",
   "spriteId": {
-    "name": "Sprite12",
-    "path": "sprites/Sprite12/Sprite12.yy",
+    "name": "spr_win",
+    "path": "sprites/spr_win/spr_win.yy",
   },
   "solid": true,
   "visible": false,
