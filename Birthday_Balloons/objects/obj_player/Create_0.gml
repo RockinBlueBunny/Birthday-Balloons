@@ -13,6 +13,6 @@ is_grounded = false;  // on ground?
 is_climbing = false;  // on ladder?
 // OBJECT REFERENCES
 ground_object = obj_ground ; // a nickname for your ground object
-
-
+//facing sprite
+facing = 1; // 1 = right, -1 = left
 

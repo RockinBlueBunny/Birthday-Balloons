@@ -30,14 +30,53 @@ else {
 // MOVE THE PLAYER
 move_and_collide(move_x, move_y, ground_object); // the one line that actually moves the object
 
-
+if (place_meeting(x, y, ground_object))
+{
+    show_debug_message("Inside ground!");
+}
 // ##################### AVOID STICKING TO THE BOTTOM OF PLATFORMS #####################
 if (is_ceiling) { // If hitting ceiling (platform above), move back down
 	if (move_y < 0) {
 		move_y = 0;	
 	}
 }
-
+if (keyboard_check(ord("D")))
+{
+    sprite_index = spr_boyrunright;
+}
+else if (keyboard_check(ord("A")))
+{
+    sprite_index = spr_boyrunleft;
+}
+else
+{
+    // Idle sprite based on last facing direction
+    if (image_xscale == 1)
+    {
+        sprite_index = spr_boyidleright;
+    }
+    else
+    {
+        sprite_index = spr_boyidleleft;
+    }
+}
+if (keyboard_check(ord("D")))
+{
+    facing = 1;
+    sprite_index = spr_boyrunright;
+}
+else if (keyboard_check(ord("A")))
+{
+    facing = -1;
+    sprite_index = spr_boyrunleft;
+}
+else
+{
+    if (facing == 1)
+        sprite_index = spr_boyidleright;
+    else
+        sprite_index = spr_boyidleleft;
+}
 if (place_meeting(x, y, obj_balloon)) {
     got_balloon = true;
 
@@ -47,10 +86,10 @@ if (place_meeting(x, y, obj_balloon)) {
     }
 
     //make gravity stronger
-    gravity_force -= 0.05;
+    gravity_force -= 0.07;
 
     //slow falling
-    max_fall_speed -= 0.5;
+    max_fall_speed -= 0.7;
 	
 	//jump speed
 	jump_speed -= 1
@@ -164,5 +203,41 @@ if (place_meeting(x, y, obj_rainbowballoon)) {
 	
 	//jump speed
 	jump_speed += 1
-	
+}
+if (keyboard_check(ord("D")))
+{
+    sprite_index = spr_boyrunright;
+}
+else if (keyboard_check(ord("A")))
+{
+    sprite_index = spr_boyrunleft;
+}
+else
+{
+    // Idle sprite based on last facing direction
+    if (image_xscale == 1)
+    {
+        sprite_index = spr_boyidleright;
+    }
+    else
+    {
+        sprite_index = spr_boyidleleft;
+    }
+}
+if (keyboard_check(ord("D")))
+{
+    facing = 1;
+    sprite_index = spr_boyrunright;
+}
+else if (keyboard_check(ord("A")))
+{
+    facing = -1;
+    sprite_index = spr_boyrunleft;
+}
+else
+{
+    if (facing == 1)
+        sprite_index = spr_boyidleright;
+    else
+        sprite_index = spr_boyidleleft;
 }

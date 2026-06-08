@@ -1,8 +1,7 @@
 /// @DnDAction : YoYo Games.Instances.Set_Sprite
 /// @DnDVersion : 1
-/// @DnDHash : 051062A4
-/// @DnDArgument : "imageind_relative" "1"
-/// @DnDArgument : "spriteind" "red_hat_idiot_run_left"
-/// @DnDSaveInfo : "spriteind" "red_hat_idiot_run_left"
-sprite_index = red_hat_idiot_run_left;
-image_index += 0;
+/// @DnDHash : 63139CCB
+/// @DnDArgument : "spriteind" "spr_boyrunleft"
+/// @DnDSaveInfo : "spriteind" "spr_boyrunleft"
+sprite_index = spr_boyrunleft;
+image_index = 0;
