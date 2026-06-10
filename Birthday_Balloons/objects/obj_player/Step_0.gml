@@ -5,7 +5,6 @@ move_x *= move_speed;
 var jump_pressed = keyboard_check_pressed(vk_space); // var makes this a local variable
 
 
-
 // Check if standing on the ground
 is_grounded = place_meeting(x, y+2, ground_object);
 is_ceiling = place_meeting(x, y-2, ground_object);
