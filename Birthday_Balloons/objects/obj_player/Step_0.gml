@@ -85,7 +85,7 @@ if (place_meeting(x, y, obj_balloon)) {
     }
 
     //make gravity stronger
-    gravity_force -= 0.07;
+    gravity_force -= 0.08;
 
     //slow falling
     max_fall_speed -= 0.7;
