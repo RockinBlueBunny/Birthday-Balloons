@@ -94,6 +94,24 @@ if (place_meeting(x, y, obj_balloon)) {
 	jump_speed -= 1
 	
 }
+if (place_meeting(x, y, obj_rocketship)) {
+    got_balloon = true;
+
+    var myinstance = instance_place(x, y, obj_rocketship);
+    if (myinstance != noone) {
+        instance_destroy(myinstance);
+    }
+
+    //make gravity stronger
+    gravity_force -= 1;
+
+    //slow falling
+    max_fall_speed -= 0.7;
+	
+	//jump speed
+	jump_speed -= 1
+	
+}
 /// STEP EVENT
 
 // ---------------- APPLY GRAVITY ----------------

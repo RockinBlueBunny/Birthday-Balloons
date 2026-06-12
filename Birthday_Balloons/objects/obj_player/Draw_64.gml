@@ -18,12 +18,12 @@ draw_text(12, 50, string("balloon: ") + "");
 /// @DnDHash : 6213E48F
 /// @DnDArgument : "x" "80"
 /// @DnDArgument : "y" "35"
-/// @DnDArgument : "sprite" "spr_balloon"
+/// @DnDArgument : "sprite" "spr_balloonsprite"
 /// @DnDArgument : "number" "global.var_balloon"
-/// @DnDSaveInfo : "sprite" "spr_balloon"
-var l6213E48F_0 = sprite_get_width(spr_balloon);
+/// @DnDSaveInfo : "sprite" "spr_balloonsprite"
+var l6213E48F_0 = sprite_get_width(spr_balloonsprite);
 var l6213E48F_1 = 0;
 for(var l6213E48F_2 = global.var_balloon; l6213E48F_2 > 0; --l6213E48F_2) {
-	draw_sprite(spr_balloon, 0, 80 + l6213E48F_1, 35);
+	draw_sprite(spr_balloonsprite, 0, 80 + l6213E48F_1, 35);
 	l6213E48F_1 += l6213E48F_0;
 }
